@@ -68,7 +68,7 @@ package sk.yoz.ycanvas.map.display
         /**
         * YCanvas scale.
         */
-        public function set scale(value:Number):void
+        override public function set scale(value:Number):void
         {
             if(scale == value)
                 return;
@@ -77,7 +77,7 @@ package sk.yoz.ycanvas.map.display
             updatePosition();
         }
         
-        public function get scale():Number
+        override public function get scale():Number
         {
             return _scale;
         }

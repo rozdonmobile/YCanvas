@@ -29,7 +29,7 @@ package sk.yoz.ycanvas.starling
         * Indicates both horizontal and vertical scale (percentage) of the 
         * object.
         */
-        public function set scale(value:Number):void
+        override public function set scale(value:Number):void
         {
             scaleX = scaleY = value;
         }
