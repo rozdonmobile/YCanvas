@@ -51,7 +51,7 @@ package sk.yoz.ycanvas.map.utils
             
             for(var length:uint = points.length; xi < length; xi += 2, yi += 2)
             {
-                var override:Boolean = false;
+                var isOverride:Boolean = false;
                 var p1x:Number = points[xi], p1y:Number = points[yi];
                 var rotation:Number = Math.atan2(p1y - p0y, p1x - p0x);
                 var dx:Number = Math.sin(rotation) * t2;
@@ -60,12 +60,12 @@ package sk.yoz.ycanvas.map.utils
                 var v1x:Number = p0x - dx, v1y:Number = p0y + dy;
                 
                 if(v0x == v2x && v0y == v2y && v1x == v3x && v1y == v3y)
-                    override = true;
+                    isOverride = true;
                 
                 var v2x:Number = p1x + dx, v2y:Number = p1y - dy;
                 var v3x:Number = p1x - dx, v3y:Number = p1y + dy;
                 
-                if(override)
+                if(isOverride)
                 {
                     result.splice(result.length - 4, 4);
                     result.push(v2x, v2y, v3x, v3y);
